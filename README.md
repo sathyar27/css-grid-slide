@@ -1,5 +1,3 @@
-#CSS-Grid-Layouts
-
 #CSS Grid Layouts
 Two dimensional grid based layout.
 
