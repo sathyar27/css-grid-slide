@@ -1,0 +1,147 @@
+.reveal {
+    color: #9d9c9c;
+    font-size: 30px;
+}
+.reveal h1.introHead {
+    margin-bottom: 0;
+    line-height: 0.3;
+    color: #fff;
+    font-size: 2em;
+}
+.reveal pre {
+    font-size: 0.7em;
+}
+.reveal pre.fontBig {
+    font-size: 0.9em;
+}
+.reveal section img {
+    border: none;
+}
+.introHead i,
+.introHead span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.introHead span {
+    margin-bottom: 0;
+    line-height: 0.8;
+}
+.reveal h1.introHead small {
+    font-size: 0.32em;
+    color: #f75d3c;
+    display: block;
+}
+.reveal h2 {
+    font-size: 1.8em;
+    color: #fff;
+}
+.reveal h2 small {
+    color: #cc8677;
+}
+.reveal h3 {
+    color: #fff;
+    font-size: 1.3em;
+    margin-bottom: 0;
+}
+.reveal p code {
+    background-color: #b6b6b6;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #000;
+    font-size: 70%;
+}
+.introHead i {
+    background-image: url(../img/grid-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+    width: 150px;
+    height: 90px;
+    margin: 0 auto 30px;
+}
+.blockWrap {
+    display: block;
+}
+.blockWrap .notes i {
+    display: block;
+    text-decoration: underline;
+}
+.blockWrap .notes {
+    display: block;
+    font-size: 0.4em;
+    float: right;
+}
+.blockWrap {
+    text-align: left;
+}
+.blockWrap p.steps i {
+    font-size: 0.7em;
+}
+.blockWrap p.steps span {
+    display: inline-block;
+    font-size: 0.8em;
+    color: #42affa;
+    padding-left: 0.5em;
+}
+.reveal h6.commandTitle {
+    font-size: 0.5em;
+    font-weight: normal;
+    color: #42affa;
+    text-align: left;
+    padding-left: 2.6em;
+    margin-bottom: 10px;
+}
+.reveal pre.pre {
+    margin: 0 auto 30px;
+}
+.reveal p small {
+    color: #a2a2a2;
+}
+.gridList {
+    overflow: hidden;
+}
+.gridList li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.7em;
+    width: 23%;
+    padding: 0 0 0.7em;
+}
+.tipsLst li {
+    font-size: 0.7em;
+}
+.tipsLst p {
+    padding-left: 0.7em;
+}
+.tipsLst img {
+    display: block;
+}
+.reveal .smallTitle {
+    font-size: 0.95em;
+}
+.centerTxt{
+    text-align: center;
+}
+.reveal p.font16 {
+    font-size: 0.8em;
+}
+.reveal p.font16 small {
+    font-size: 0.75em;
+}
+.blue {
+    color: #42affa;
+}
+.white{
+    color: #FFF;
+}
+.fragment span {
+    color: #00d485;
+}
+.reveal section .fragment img {
+    background: none;
+    box-shadow: none;
+}
+.reveal a {
+    color: #fa7542;
+}
