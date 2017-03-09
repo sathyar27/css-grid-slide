@@ -51,55 +51,185 @@
 				</section>
 				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>CSS Grid Container Properties</h2>
-						<p class="fragment">display</p>
-						<p class="fragment">grid</p>
-						<p class="fragment">grid-template</p>
-						<p class="fragment">grid-gap</p>
-						<p class="fragment">grid-auto-flow</p>
-						<p class="fragment">grid-auto-columns</p>
-						<p class="fragment">grid-auto-rows</p>
-					</section>
-					<section>
-						<h3>display</h3>
-						<p class="fragment">
-							<img src="img/code-struct9.jpg" alt="auto column and row">
-						</p>
-						<h3 class="fragment">grid-template-columns</h3>
-						<p class="fragment">
-							<img src="img/code-struct1.jpg" alt="auto column and row">
-						</p>
-						<h3 class="fragment">grid-template-rows</h3>
-						<p class="fragment">
-							<img src="img/code-struct4.jpg" alt="auto column and row">
-						</p>
-					</section>
-					<section>
-						<h3>grid-template-areas</h3>
-						<p class="fragment">
-							<img src="img/code-struct3.jpg" alt="auto column and row">
-						</p>
-					</section>
-					<section>
-						<h3>grid-gap, grid-template-rows and grid-template-columns</h3>
-						<p class="fragment">
-							<img src="img/code-struct8.jpg" alt="auto column and row">
-						</p>
-					</section>
+					<h2>CSS Grid Container Properties</h2>
+					<ul class="listInline">
+						<li class="fragment">display</li>
+						<li class="fragment">grid-template-rows</li>
+						<li class="fragment">grid-template-columns</li>
+						<li class="fragment">grid-row-gap</li>
+						<li class="fragment">grid-column-gap</li>
+						<li class="fragment">grid-gap</li>
+						<li class="fragment">grid-template-areas</li>
+						<li class="fragment">grid-template</li>
+						<li class="fragment">grid-auto-columns</li>
+						<li class="fragment">grid-auto-rows</li>
+						<li class="fragment">grid-auto-flow</li>
+						<li class="fragment">grid</li>
+					</ul>
+				</section>
+				<section>
+					<h2>CSS Child Properties</h2>
+					<ul class="listInline">
+						<li class="fragment">grid-column</li>
+						<li class="fragment">grid-column-start</li>
+						<li class="fragment">grid-column-end</li>
+						<li class="fragment">grid-row</li>
+						<li class="fragment">grid-row-start</li>
+						<li class="fragment">grid-row-end</li>
+						<li class="fragment">grid-area</li>
+					</ul>
 				</section>
 				<section>
 					<section>
-						<h2>Grid Properties</h2>
-						<p class="fragment">grid-column</p>
-						<p class="fragment">grid-row</p>
-						<p class="fragment">grid-area</p>
+						<h3>grid-template-columns,grid-template-rows,grid-gap & <br>grid-column, grid-row</h3>
+						<div class="rowBlock">
+							<div>
+								<div class="code">
+									<p class="fragment"><strong>Syntax</strong></p>
+									<p class="fragment">
+										<img src="img/syntax2.jpg" alt="auto column and row">
+									</p>
+									<p class="fragment"><strong>Example</strong></p>
+									<p class="fragment">
+										<img src="img/code2.jpg" alt="auto column and row">
+									</p>
+								</div>
+							</div>
+							<div>
+								<div class="code">
+									<p class="fragment"><strong>Demo</strong></p>
+									<div class="output fragment gridDemo1">
+										<div class="header">header</div>
+										<div class="navMenu">navigation</div>
+										<div class="main">main container</div>
+										<div class="footer">footer</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</section>
 					<section>
-						<h3>grid-column and grid-row</h3>
-						<p class="fragment">
-							<img src="img/code-struct7.jpg" alt="auto column and row">
-						</p>
+						<h3>grid-template-areas and grid-area</h3>
+						<div class="rowBlock">
+							<div>
+								<div class="code">
+									<p class="fragment noMargin"><strong>Syntax</strong></p>
+									<p class="fragment">
+										<img src="img/syntax3.jpg" alt="auto column and row">
+									</p>
+									<p class="fragment noMargin"><strong>Example</strong></p>
+									<p class="fragment">
+										<img src="img/code3.jpg" alt="auto column and row">
+									</p>
+								</div>
+							</div>
+							<div>
+								<div class="code">
+									<p class="fragment"><strong>Demo</strong></p>
+									<div class="output fragment gridDemo2">
+										<header class="header">Header</header>
+										<nav class="navMenu">Section</nav>
+										<main class="main">Main Container</main>
+										<footer class="footer">Footer</footer>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h3>grid-template</h3>
+						<div class="rowBlock">
+							<div>
+								<div class="code">
+									<p class="fragment noMargin"><strong>Syntax</strong></p>
+									<p class="fragment">
+										<img src="img/syntax4.jpg" alt="auto column and row">
+									</p>
+
+								</div>
+							</div>
+							<div>
+								<div class="code">
+									<p class="fragment noMargin"><strong>Example</strong></p>
+									<p class="fragment">
+										<img src="img/code4.jpg" alt="auto column and row">
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="rowBlock">
+							<div class="code">
+							<p class="fragment noMargin"><strong>Demo</strong></p>
+							<div class="output fragment gridDemo3">
+								<header class="header">Header</header>
+								<nav class="navMenu">Nav</nav>
+								<main class="main">Main Container</main>
+								<aside class="aside">Aside</aside>
+								<footer class="footer">Footer</footer>
+							</div>
+							</div>
+						</div>
+
+					</section>
+					<section>
+						<h3>grid-auto-columns</h3>
+						<div class="rowBlock">
+							<div>
+								<div class="code">
+									<p class="fragment noMargin"><strong>Keyword Values Syntax</strong></p>
+									<p class="fragment">
+										<img src="img/syntax41.jpg" alt="auto column and row">
+									</p>
+
+								</div>
+							</div>
+							<div>
+								<div class="code">
+									<p class="fragment noMargin"><strong>Length & Percent Values Syntax</strong></p>
+									<p class="fragment">
+										<img src="img/code41.jpg" alt="auto column and row">
+									</p>
+								</div>
+							</div>
+							<div>
+								<div class="code">
+									<p class="fragment noMargin"><strong>Flex Values Syntax</strong></p>
+									<p class="fragment">
+										<img src="img/code41.jpg" alt="auto column and row">
+									</p>
+								</div>
+							</div>
+							<div>
+								<div class="code">
+									<p class="fragment noMargin"><strong>minmax() Values Syntax</strong></p>
+									<p class="fragment">
+										<img src="img/code41.jpg" alt="auto column and row">
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="rowBlock">
+							<div class="code">
+							<p class="fragment noMargin"><strong>Demo</strong></p>
+							<div class="fragment">
+								<ul class="gallery gridDemo4">
+									<li>
+										<span style="background-image: url('img/imgg250_1.jpg')"></span>
+									</li>
+									<li>
+										<span style="background-image: url('img/imgg250_2.jpg')"></span>
+									</li>
+									<li>
+										<span style="background-image: url('img/imgg250_3.jpg')"></span>
+									</li>
+									<li>
+										<span style="background-image: url('img/imgg250_1.jpg')"></span>
+									</li>
+								</ul>
+							</div>
+							</div>
+						</div>
+
 					</section>
 				</section>
 				<section>
@@ -136,8 +266,6 @@
 				</section>
 				<section>
 					<h2>Tips</h2>
-					<p class="fragment">justify-self</p>
-					<p class="fragment">align-self</p>
 					<p class="fragment">column</p>
 					<p class="fragment">float</p>
 					<p class="fragment">clear</p>
