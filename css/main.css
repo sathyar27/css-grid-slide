@@ -263,7 +263,7 @@
 }
 
 /* code and demo */
-//.rowBlock > div:first-of-type { width: 60%; }
+/*.rowBlock > div:first-of-type { width: 60%; }*/
 .code { text-align: left; }
 .code strong { color: #ded192; font-size: 80%; }
 .code p { margin: 0 0 10px;  }
@@ -302,4 +302,12 @@
 .gridDemo4 {
     grid-template-columns: repeat(2,1fr);
     grid-auto-rows: minmax(120px, auto);
+}
+
+.reveal ul.listUnstyled { font-size: 70%; }
+.listUnstyled li { margin-bottom: 0px; }
+
+.gridDemo5 {
+    //grid-template-columns: repeat(2,1fr);
+    grid-auto-flow: column dense;
 }
