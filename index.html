@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css" id="theme">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/select.css">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -49,31 +50,52 @@
 					<p class="fragment">Easy to maintain our code in neater way.</p>
 					<p class="fragment">Free from Plugin's and Frameworks.</p>
 				</section>
-				<!-- Example of nested vertical slides -->
+				<section class="blackWhite">
+					<section>
+						<h2>Grid Lines</h2>
+						<img src="img/grid-line.jpg" alt="auto column and row">
+					</section>
+					<section>
+						<h2>Grid Cell</h2>
+						<img src="img/grid-cell.jpg" alt="auto column and row">
+					</section>
+					<section>
+						<h2>Grid Track</h2>
+						<img src="img/grid-track.jpg" alt="auto column and row">
+					</section>
+					<section>
+						<h2>Grid Gutters</h2>
+						<img src="img/grid-gutter.jpg" alt="auto column and row">
+					</section>
+					<section>
+						<h2>Grid Areas</h2>
+						<img src="img/grid-area.jpg" alt="auto column and row">
+					</section>
+				</section>
 				<section>
 					<h2>CSS Grid Container Properties</h2>
 					<ul class="listInline">
 						<li class="fragment">display</li>
-						<li class="fragment">grid-template-rows</li>
 						<li class="fragment">grid-template-columns</li>
+						<li class="fragment">grid-template-rows</li>
+						<li class="fragment">grid-template-areas</li>
+						<li class="fragment">grid-template<small>(Shorthand)</small></li>
+						<li class="fragment">grid-gap<small>(Shorthand)</small></li>
 						<li class="fragment">grid-row-gap</li>
 						<li class="fragment">grid-column-gap</li>
-						<li class="fragment">grid-gap</li>
-						<li class="fragment">grid-template-areas</li>
-						<li class="fragment">grid-template</li>
 						<li class="fragment">grid-auto-columns</li>
 						<li class="fragment">grid-auto-rows</li>
 						<li class="fragment">grid-auto-flow</li>
-						<li class="fragment">grid</li>
+						<li class="fragment">grid<small>(Shorthand)</small></li>
 					</ul>
 				</section>
 				<section>
 					<h2>CSS Child Properties</h2>
 					<ul class="listInline">
-						<li class="fragment">grid-column</li>
+						<li class="fragment">grid-column<small>(Shorthand)</small></li>
 						<li class="fragment">grid-column-start</li>
 						<li class="fragment">grid-column-end</li>
-						<li class="fragment">grid-row</li>
+						<li class="fragment">grid-row<small>(Shorthand)</small></li>
 						<li class="fragment">grid-row-start</li>
 						<li class="fragment">grid-row-end</li>
 						<li class="fragment">grid-area</li>
@@ -81,316 +103,220 @@
 				</section>
 				<section>
 					<section>
-						<h3>grid-template-columns,grid-template-rows,grid-gap & <br>grid-column, grid-row</h3>
-						<div class="rowBlock">
-							<div>
-								<div class="code">
-									<p class="fragment"><strong>Syntax</strong></p>
-									<p class="fragment">
-										<img src="img/syntax2.jpg" alt="auto column and row">
-									</p>
-									<p class="fragment"><strong>Example</strong></p>
-									<p class="fragment">
-										<img src="img/code2.jpg" alt="auto column and row">
-									</p>
-								</div>
-							</div>
-							<div>
-								<div class="code">
-									<p class="fragment"><strong>Demo</strong></p>
-									<div class="output fragment gridDemo1">
-										<div class="header">header</div>
-										<div class="navMenu">navigation</div>
-										<div class="main">main container</div>
-										<div class="footer">footer</div>
-									</div>
-								</div>
-							</div>
+						<h3>display</h3>
+						<p><img src="img/code-img1.jpg" alt="auto column and row" /></p>
+					</section>
+					<section>
+						<h3>grid-template-columns</h3>
+						<p>
+							<strong>Syntax:</strong>
+							<img src="img/syntax-img2.jpg" alt="auto column and row" />
+							<img src="img/code-img2.jpg" alt="auto column and row" />
+						</p>
+					</section>
+					<section>
+						<p><strong>Demo</strong></p>
+						<div class="output fragment gridTempCol">
+							<div class="navMenu">navigation</div>
+							<div class="main">main container</div>
+							<span class="row row1"></span>
+							<span class="row row4"></span>
+							<span class="col col1"></span>
+							<span class="col col2"></span>
+							<span class="col col3"></span>
 						</div>
 					</section>
 					<section>
-						<h3>grid-template-areas and grid-area</h3>
-						<div class="rowBlock">
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Syntax</strong></p>
-									<p class="fragment">
-										<img src="img/syntax3.jpg" alt="auto column and row">
-									</p>
-									<p class="fragment noMargin"><strong>Example</strong></p>
-									<p class="fragment">
-										<img src="img/code3.jpg" alt="auto column and row">
-									</p>
-								</div>
-							</div>
-							<div>
-								<div class="code">
-									<p class="fragment"><strong>Demo</strong></p>
-									<div class="output fragment gridDemo2">
-										<header class="header">Header</header>
-										<nav class="navMenu">Section</nav>
-										<main class="main">Main Container</main>
-										<footer class="footer">Footer</footer>
-									</div>
-								</div>
-							</div>
+						<h3>grid-template-rows</h3>
+						<p>
+							<strong>Syntax:</strong>
+							<img src="img/syntax-img3.jpg" alt="auto column and row" />
+							<img src="img/code-img3.jpg" alt="auto column and row" />
+						</p>
+					</section>
+					<section>
+						<p><strong>Demo</strong></p>
+						<div class="output fragment gridTempRow">
+							<div class="header">Header</div>
+							<div class="main">main container</div>
+							<div class="footer">Footer</div>
+							<span class="row row1"></span>
+							<span class="row row2"></span>
+							<span class="row row3"></span>
+							<span class="row row4"></span>
+							<span class="col col1"></span>
+							<span class="col col3"></span>
+						</div>
+					</section>
+					<section>
+						<h3>grid-template-areas</h3>
+						<p>
+							<strong>Syntax:</strong>
+							<img src="img/syntax-img4.jpg" alt="auto column and row" />
+							<img src="img/code-img4.jpg" alt="auto column and row" />
+						</p>
+					</section>
+					<section>
+						<p><strong>Demo</strong></p>
+						<div class="output fragment gridTempAreas">
+							<div class="header">Header</div>
+							<div class="nav">Navigation</div>
+							<div class="main">main container</div>
+							<div class="footer">Footer</div>
+							<span class="row row1"></span>
+							<span class="row row2"></span>
+							<span class="row row3"></span>
+							<span class="row row4"></span>
+							<span class="col col1"></span>
+							<span class="col col2"></span>
+							<span class="col col3"></span>
 						</div>
 					</section>
 					<section>
 						<h3>grid-template</h3>
-						<div class="rowBlock">
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Syntax</strong></p>
-									<p class="fragment">
-										<img src="img/syntax4.jpg" alt="auto column and row">
-									</p>
-
-								</div>
-							</div>
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Example</strong></p>
-									<p class="fragment">
-										<img src="img/code4.jpg" alt="auto column and row">
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="rowBlock">
-							<div class="code">
-							<p class="fragment noMargin"><strong>Demo</strong></p>
-							<div class="output fragment gridDemo3">
-								<header class="header">Header</header>
-								<nav class="navMenu">Nav</nav>
-								<main class="main">Main Container</main>
-								<aside class="aside">Aside</aside>
-								<footer class="footer">Footer</footer>
-							</div>
-							</div>
-						</div>
-
+						<p>
+							<strong>Syntax:</strong>
+							<img src="img/syntax-img5.jpg" alt="auto column and row" />
+							<img src="img/code-img5.jpg" alt="auto column and row" />
+						</p>
 					</section>
 					<section>
-						<h3>grid-auto-columns & grid-auto-rows</h3>
-						<div class="rowBlock">
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Possible Values</strong></p>
-									<ul class="listUnstyled">
-										<li class="fragment">Keyword</li>
-										<li class="fragment">Length</li>
-										<li class="fragment">Percentage</li>
-										<li class="fragment">minmax()</li>
-										<li class="fragment">Global</li>
-									</ul>
-								</div>
-							</div>
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Keyword</strong></p>
-									<p class="fragment">
-										<img src="img/code5.jpg" alt="auto column and row">
-									</p>
-
-								</div>
-							</div>
-						</div>
-						<div class="rowBlock">
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Length</strong></p>
-									<p class="fragment">
-										<img src="img/code6.jpg" alt="auto column and row">
-									</p>
-								</div>
-							</div>
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Percent</strong></p>
-									<p class="fragment">
-										<img src="img/code7.jpg" alt="auto column and row">
-									</p>
-								</div>
-							</div>
-
-						</div>
-						<div class="rowBlock">
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Flex</strong></p>
-									<p class="fragment">
-										<img src="img/code8.jpg" alt="auto column and row">
-									</p>
-								</div>
-							</div>
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>minmax()</strong></p>
-									<p class="fragment">
-										<img src="img/code9.jpg" alt="auto column and row">
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="rowBlock">
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Global</strong></p>
-									<p class="fragment">
-										<img src="img/code11.jpg" alt="auto column and row">
-									</p>
-								</div>
-							</div>
+						<p><strong>Demo</strong></p>
+						<div class="output fragment gridTemp">
+							<div class="header">Header</div>
+							<div class="nav">Navigation</div>
+							<div class="main">main container</div>
+							<div class="footer">Footer</div>
+							<span class="row row1"></span>
+							<span class="row row2"></span>
+							<span class="row row3"></span>
+							<span class="row row4"></span>
+							<span class="col col1"></span>
+							<span class="col col2"></span>
+							<span class="col col3"></span>
 						</div>
 					</section>
 					<section>
-						<div class="rowBlock">
-							<div class="code">
-								<p class="noMargin"><strong>minmax() Demo</strong></p>
-								<div class="fragment">
-									<ul class="gallery gridDemo4">
-										<li>
-											<span style="background-image: url('img/imgg250_1.jpg')"></span>
-										</li>
-										<li>
-											<span style="background-image: url('img/imgg250_2.jpg')"></span>
-										</li>
-										<li>
-											<span style="background-image: url('img/imgg250_3.jpg')"></span>
-										</li>
-										<li>
-											<span style="background-image: url('img/imgg250_1.jpg')"></span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="code">
-								<p class="fragment noMargin"><strong>Percent Value Demo</strong></p>
-								<div class="fragment">
-									<ul class="gallery gridDemo7">
-										<li>
-											<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-										</li>
-										<li>
-											<div>Lorem Ipsum is simply dummy text of the printing.</div>
-										</li>
-										<li>
-											<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-										</li>
-										<li>
-											<div>4</div>
-										</li>
-									</ul>
-								</div>
-							</div>
+						<h3>grid-gap</h3>
+						<p>
+							<strong>Syntax:</strong>
+							<img src="img/syntax-img5.jpg" alt="auto column and row" />
+							<img src="img/code-img5.jpg" alt="auto column and row" />
+						</p>
+					</section>
+					<section>
+						<p><strong>Demo</strong></p>
+						<div class="output fragment gridGap">
+							<div class="header">Header</div>
+							<div class="nav">Navigation</div>
+							<div class="main">Main container</div>
+							<div class="footer">Footer</div>
+							<span class="row row1"></span>
+							<span class="row row2"></span>
+							<span class="row row3"></span>
+							<span class="row row4"></span>
+							<span class="row row5"></span>
+							<span class="row row6"></span>
+							<span class="col col1"></span>
+							<span class="col col2"></span>
+							<span class="col col3"></span>
+							<span class="col col4"></span>
+							<span class="rowGap rowGap1">Row Gap</span>
+							<span class="rowGap rowGap2">Row Gap</span>
+							<span class="colGap">Col Gap</span>
 						</div>
 					</section>
 					<section>
 						<h3>grid-auto-flow</h3>
-						<div class="rowBlock">
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Possible Values</strong></p>
-									<ul class="listUnstyled">
-										<li class="fragment">row</li>
-										<li class="fragment">column</li>
-										<li class="fragment">dense</li>
-										<li class="fragment">row dense</li>
-										<li class="fragment">column dense</li>
-									</ul>
-								</div>
-							</div>
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Syntax</strong></p>
-									<p class="fragment">
-										<img src="img/code12.jpg" alt="auto column and row">
-									</p>
-								</div>
+						<p>
+							<strong>Syntax:</strong>
+							<img src="img/syntax-img6.jpg" alt="auto column and row" />
+							<img src="img/code-img6.jpg" alt="auto column and row" />
+						</p>
+					</section>
+					<section>
+						<div class="selectGroup">
+							<p><strong>Demo <small>(grid-auto-flow: <i>column</i>)</small></strong></p>
+							<div class="absoluteSelect">
+								<select name="abc">
+									<option value="1">choose</option>
+									<option value="2">column</option>
+									<option value="3">column dense</option>
+									<option value="4">row</option>
+									<option value="5">row dense</option>
+									<option value="6">dense</option>
+								</select>
 							</div>
 						</div>
-						<div class="rowBlock">
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Syntax</strong></p>
-									<p class="fragment">
-										<img src="img/code13.jpg" alt="auto column and row">
-									</p>
-								</div>
-							</div>
-							<div>
-								<div class="code">
-									<p class="fragment noMargin"><strong>Demo</strong></p>
-									<div class="fragment">
-										<ul class="gallery gridDemo5">
-											<li>
-												<div>1</div>
-											</li>
-											<li>
-												<div>2</div>
-											</li>
-											<li>
-												<div>3</div>
-											</li>
-											<li>
-												<div>4</div>
-											</li>
-											<li>
-												<div>5</div>
-											</li>
-											<li>
-												<div>6</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
+						<div class="output gridAutoFlow">
+							<div><span></span></div>
+							<div><span></span></div>
+							<div><span></span></div>
+							<div><span></span></div>
+							<div><span></span></div>
+							<div><span></span></div>
+							<div><span></span></div>
+							<!-- <span class="row row1"></span>
+							<span class="row row2"></span>
+							<span class="row row3"></span>
+							<span class="row row4"></span>
+							<span class="row row5"></span>
+							<span class="row row6"></span>
+							<span class="col col1"></span>
+							<span class="col col2"></span>
+							<span class="col col3"></span>
+							<span class="col col4"></span>
+							<span class="rowGap rowGap1">Row Gap</span>
+							<span class="rowGap rowGap2">Row Gap</span>
+							<span class="colGap">Col Gap</span> -->
+						</div>
+					</section>
+					<section>
+						<h3>masonry layout</h3>
+						<p>
+							<strong>Syntax:</strong>
+							<img src="img/syntax-img6.jpg" alt="auto column and row" />
+							<img src="img/code-img6.jpg" alt="auto column and row" />
+						</p>
+					</section>
+					<section>
+						<p><strong>Demo</strong></p>
+						<div class="output fragment masonry">
+							<div><img src="img/imgg250_1.jpg" /></div>
+							<div><img src="img/imgg515_1.jpg" /></div>
+							<div><img src="img/imgg250_2.jpg" /></div>
+							<div><img src="img/imgg515_1.jpg" /></div>
+							<div><img src="img/imgg250_1.jpg" /></div>
+							<div><img src="img/imgg250_2.jpg" /></div>
 						</div>
 					</section>
 					<section>
 						<h2>CSS Grid Masonry</h2>
-						<div class="rowBlock">
-							<div>
-								<div class="code">
-									<p class="fragment"><strong>Syntax:</strong></p>
-									<div class="fragment">
-										<img src="img/masonry-code.jpg" alt="auto column and row">
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="code">
-									<p class="fragment">Demo</p>
-									<div class="fragment">
-										<ul class="gallery gridDemo6">
-											<li>
-												<span style="background-image: url('img/imgg250_1.jpg')"></span>
-											</li>
-											<li>
-												<span style="background-image: url('img/imgg250_2.jpg')"></span>
-											</li>
-											<li>
-												<span style="background-image: url('img/imgg250_3.jpg')"></span>
-											</li>
-											<li>
-												<span style="background-image: url('img/imgg250_1.jpg')"></span>
-											</li>
-										</ul>
-									</div>
-								</div>
+						<div class="code">
+							<p class="fragment">Demo</p>
+							<div class="fragment">
+								<ul class="gallery gridDemo6">
+									<li><img src="img/imgg250_1.jpg" />
+									</li>
+									<li>
+										<img src="img/imgg515_1.jpg" />
+									</li>
+									<li>
+										<img src="img/imgg250_3.jpg" />
+									</li>
+									<li><img src="img/imgg250_1.jpg" />
+									</li>
+									<li>
+										<img src="img/imgg515_1.jpg" />
+									</li>
+									<li>
+										<img src="img/imgg250_3.jpg" />
+									</li>
+								</ul>
 							</div>
 						</div>
 					</section>
-				</section>
-
-				<!-- <section>
-					<h2>Tips</h2>
-					<p class="fragment">column</p>
-					<p class="fragment">float</p>
-					<p class="fragment">clear</p>
-					<p class="fragment">vertical-align</p>
-				</section>-->
+				</section>			
 				<section>
 					<section>
 						<h2>Browser Support:</h2>
@@ -414,10 +340,7 @@
 					<section>
 						<h2>Polyfill</h2>
 						<p class="fragment">
-							Polyfill with old specification<br><a href="https://github.com/codler/Grid-Layout-Polyfill" target="_blank">Polyfill</a>
-						</p>
-						<p class="fragment">
-							Polyfill with new specification<br><a href="https://github.com/FremyCompany/css-grid-polyfill/" target="_blank">Polyfill</a>
+							Polyfill with new specification<br><a href="https://github.com/FremyCompany/css-grid-polyfill/" target="_blank">https://github.com/FremyCompany/css-grid-polyfill/</a>
 						</p>
 					</section>
 				</section>
@@ -477,6 +400,8 @@
 			});
 
 		</script>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script src="js/select.js"></script>
 
 	</body>
 </html>
