@@ -2,6 +2,7 @@
 	$.fn.customSelect = function (options) {
 		return this.each(function () {
 			var el = $(this);
+				el.commonWrap = $('<div class="absoluteSelect"/>');
 
 			var optionTag = el.children(),
 				wrapperDIV = $('<div class="customSelect"/>'),
@@ -11,11 +12,12 @@
 				icon = $('<i class="arrow"/>'),
 				ULTag = $('<ul/>');
 
-				el.parent().append(valueHolder);
-				el.parent().append(icon);
+				el.parent().append(el.commonWrap);
+				el.commonWrap.append(valueHolder);
+				el.commonWrap.append(icon);
 				valueHolder.append(spanTag);
 				valueHolder.append(spanTag1);
-				el.parent().append(wrapperDIV);
+				el.commonWrap.append(wrapperDIV);
 				wrapperDIV.append(ULTag);
 
 
@@ -24,53 +26,86 @@
 				}).end().remove();
 
 			spanTag.click(function () {
-				if($(this).parents('.absoluteSelect').hasClass('next') && $(this).parents('.absoluteSelect').hasClass('active')) {
-					$(this).parents('.absoluteSelect').removeClass('active next');
-					$('.arrow').addClass('close');
+				if(el.commonWrap.hasClass('next') && el.commonWrap.hasClass('active')) {
+					el.commonWrap.removeClass('active next');
+					el.commonWrap.find('.arrow').addClass('close');
 				}
 				else {
-					$('.arrow').removeClass('close');
-					$(this).parents('.absoluteSelect').addClass('active');
+					el.commonWrap.find('.arrow').removeClass('close');
+					el.commonWrap.addClass('active');
 				}
 			});
 
-			$('.text').text("Choose");
-			
+			var defaultText = el.commonWrap.find('li:first-child').text();
+            el.commonWrap.find('.text').text(defaultText);
+
+			var currval;
 			ULTag.each(function () {
 				$('li', this).click(function () {
-					$('.text').text($(this).text());
-					$(this).parents('.absoluteSelect').removeClass('active').addClass('closeActive next')
+					currval = $(this).text();
+					el.commonWrap.find('.text').text(currval);
+					el.commonWrap.removeClass('active').addClass('closeActive next')
+					el.commonWrap.find('.arrow').removeClass('close');
+					el.commonWrap.find('.arrow').addClass('close');
+					el.commonWrap.parent('.selectGroup').find('p i').text(currval);
 
-					if($(this).text() == "Choose") {
-						$('.text').addClass('choose');
-						$('.arrow').removeClass('close');
-						$('.selectGroup p i').text('column');
-						$('.gridAutoFlow').removeClass('autoFlowRow autoFlowDense autoFlowColDense autoFlowRowDense');
-					}
-					else if($(this).text() == "dense") {
-						$('.selectGroup p i').text('dense');
-						$('.gridAutoFlow').addClass('autoFlowDense').removeClass('autoFlowRow autoFlowColDense autoFlowRowDense');
-					}
-					else if($(this).text() === "column dense") {
-						$('.selectGroup p i').text('column dense');
-						$('.gridAutoFlow').addClass('autoFlowColDense').removeClass('autoFlowRow autoFlowDense autoFlowRowDense');
-						/*setTimeout(function() {
-							$('.gridAutoFlow').addClass('active inActive');
-						}, 2500);*/
-					}
-					else if($(this).text() === "row") {
-						$('.selectGroup p i').text('row');
-						$('.gridAutoFlow').addClass('autoFlowRow').removeClass('autoFlowDense autoFlowColDense autoFlowRowDense');
-					}
-					else if($(this).text() === "row dense") {
-						$('.selectGroup p i').text('row dense');
-						$('.gridAutoFlow').addClass('autoFlowRowDense').removeClass('autoFlowRow autoFlowDense autoFlowColDense');
+					if($(this).text() == defaultText) {
+						el.commonWrap.find('.text').addClass('choose');
+						el.commonWrap.find('.arrow').removeClass('close');
+						el.commonWrap.parent('.selectGroup').find('p i').text(defaultText);
 					}
 					else {
-						$('.arrow').addClass('close');
-						$('.text').removeClass('choose');
-						$('.selectGroup p i').text('column');
-						$('.gridAutoFlow').removeClass('autoFlowRow autoFlowDense autoFlowColDense autoFlowRowDense');
+						el.commonWrap.find('.arrow').addClass('close');
+						el.commonWrap.find('.text').removeClass('choose');
+						el.commonWrap.parent('.selectGroup').find('p i').text(currval);
+					}
+
+					if($(this).text() == 'dense') {
+						$('.gridAutoFlow').addClass('afD').removeClass('afCD afR afRD');
+					}
+					else if($(this).text() === 'column dense') {
+						$('.gridAutoFlow').addClass('afCD').removeClass('afD afR afRD');
+					}
+					else if($(this).text() === 'row') {
+						$('.gridAutoFlow').addClass('afR').removeClass('afD afCD afRD');
+					}
+					else if($(this).text() === 'row dense') {
+						$('.gridAutoFlow').addClass('afRD').removeClass('afD afCD afR');
+					}
+					else {
+						$('.gridAutoFlow').removeClass('afD afCD afR afRD');
+					}
+
+					if($(this).text() == 'minmax(100px,auto)') {
+						$('.gridAutoRows').addClass('mm').removeClass('mic fr auto');
+					}
+					else if($(this).text() === 'min-content') {
+						$('.gridAutoRows').addClass('mic').removeClass('mm fr auto');
+					}
+					else if($(this).text() === 'minmax(min-content,auto)') {
+						$('.gridAutoRows').addClass('mmic').removeClass('mm mic auto');
+					}
+					else if($(this).text() === 'auto') {
+						$('.gridAutoRows').addClass('auto').removeClass('mm mic fr');
+					}
+					else {
+						$('.gridAutoRows').removeClass('mm mic fr auto');
+					}
+
+					if($(this).text() == '1 / 3') {
+						$('.gridCol').addClass('gridCol1').removeClass('gridCol2 gridCol3');
+					}
+					else if($(this).text() === '1 / span 3') {
+						$('.gridCol').addClass('gridCol2').removeClass('gridCol3 gridCol4');
+					}
+					else if($(this).text() === 'header') {
+						$('.gridCol').addClass('gridCol3').removeClass('gridCol1 gridCol2');
+					}
+					else if($(this).text() === 'auto') {
+						$('.gridCol').addClass('auto').removeClass('gridCol1 gridCol2 gridCol3');
+					}
+					else {
+						$('.gridCol').removeClass('gridCol1 gridCol2 gridCol3');
 					}
 				});
 			});
@@ -78,14 +113,15 @@
 			icon.click(function() {
 				if($(this).hasClass('close')) {
 					$(this).removeClass('close');
-					$('.bgText').addClass('active');
-					$('.text').text('Choose').removeClass('choose');
-					$('.absoluteSelect').removeClass('active next closeActive');
-					setTimeout(function(){ $('.bgText').removeClass('active'); }, 500);
+					el.commonWrap.find('.bgText').addClass('active');
+					el.commonWrap.find('.text').text(defaultText).removeClass('choose');
+					el.commonWrap.parent('.selectGroup').find('p i').text(defaultText);
+					el.commonWrap.removeClass('active next closeActive');
+					setTimeout(function(){ el.commonWrap.find('.bgText').removeClass('active'); }, 500);
+					$('.gridAutoFlow').removeClass('autoFlowDense autoFlowColDense autoFlowRow autoFlowRowDense');
 				}
 			});
 		});
 	};
 }(jQuery));
-
 $('select').customSelect({});

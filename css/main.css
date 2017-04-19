@@ -283,12 +283,12 @@
     transform-origin: center;
 }
 .gridDemo6 li:nth-child(1) {
-    grid-column: 1 / span 2;
+    //grid-column: 1 / span 2;
     transform: translate(25%, 50%) scale(0);
 }
 .gridDemo6 li:nth-child(2) {
-    grid-column: 3;
-    grid-row: 1 / span 2;
+    //grid-column: 3;
+    //grid-row: 1 / span 2;
     transform: translate(-75%, 0) scale(0);
 }
 
@@ -625,109 +625,123 @@
     overflow: hidden;
 }
 
-.gridAutoFlow div {
+.gridAutoFlow div,
+.gridBgCommon div {
     //background-color: #e1e1e1;
     transition: all .3s;
 }
 
-.gridAutoFlow span {
+.gridAutoFlow div span,
+.gridBgCommon div span {
     display: inline-block;
     background: #6fc1d2;
     width: 100%;
     height: 100%;
+    color: #fff;
+    overflow: hidden;
 }
 
-.gridAutoFlow div:nth-child(2) span {
+.gridAutoFlow div:nth-child(2) span,
+.gridBgCommon div:nth-child(2) span {
     background: #7dc692;
 }
 
-.gridAutoFlow div:nth-child(3) span {
+.gridAutoFlow div:nth-child(3) span,
+.gridBgCommon div:nth-child(3) span {
     background: #d98e64;
 }
 
-.gridAutoFlow div:nth-child(3) {
+.gridAutoFlow div:nth-child(3),
+.gridBgCommon div:nth-child(3) {
     grid-row: 2;
 }
 
-.gridAutoFlow div:nth-child(even) span {
+.gridAutoFlow div:nth-child(even) span,
+.gridBgCommon div:nth-child(even) span {
     background: #e65d5d;
 }
 
-.gridAutoFlow div:nth-child(5) span {
+.gridAutoFlow div:nth-child(5) span,
+.gridBgCommon div:nth-child(5) span {
     background: #dd6bae;
 }
 
-.gridAutoFlow div:nth-child(6) span {
+.gridAutoFlow div:nth-child(6) span,
+.gridBgCommon div:nth-child(6) span {
     background: #508b61;
 }
 
-.autoFlowRow {
+.afR {
     grid-auto-flow: row;
 }
-.autoFlowRow div:nth-child(3),
-.autoFlowRowDense div:nth-child(3) {
+.afR div:nth-child(3),
+.afRD div:nth-child(3) {
     grid-column: 2;
     grid-row: initial;
 }
-.autoFlowRow span,
-.autoFlowRowDense span {
+.afR span,
+.afRD span {
     min-height: 70px;
 }
-.autoFlowDense {
+.afD {
     grid-auto-flow: dense;
 }
 
-.autoFlowColDense {
+.afCD {
     //grid-auto-flow: column dense;
 }
 
-.autoFlowColDense div:nth-child(4) {
+.afCD div:nth-child(4) {
     transform: translateX(-240px);
 }
 
-.autoFlowColDense div:nth-child(5),
-.autoFlowColDense div:nth-child(7) {
+.afCD div:nth-child(5),
+.afCD div:nth-child(7) {
     transform: translateY(-178px);
 }
 
-.autoFlowColDense div:nth-child(6) {
+.afCD div:nth-child(6) {
     transform: translate(-240px, 178px);
 }
 
-.autoFlowColDense.active {
+.afCD.active {
     grid-auto-flow: column dense;
 }
 
-.autoFlowColDense.active div {
+.afCD.active div {
     transform: none;
     transition: none;
 }
 
-.autoFlowColDense.inActive div {
+.afCD.inActive div {
     transform: none;
 //    transition: all .3s;
 }
 
-.autoFlowRowDense {
+.afRD {
     grid-auto-flow: row;
     overflow: hidden;
 }
 
-.autoFlowRowDense div:nth-child(4) {
+.afRD div:nth-child(4) {
     transform: translateY(-88.5px);
 }
 
-.autoFlowRowDense div:nth-child(5),
-.autoFlowRowDense div:nth-child(7) {
+.afRD div:nth-child(5),
+.afRD div:nth-child(7) {
     transform: translateX(-482px);
 }
 
-.autoFlowRowDense div:nth-child(6) {
+.afRD div:nth-child(6) {
     transform: translate(482px,-88.5px);
 }
 
 .selectGroup p small {
     vertical-align: middle;
+}
+
+.selectGroup p i {
+    color: #5cddf8;
 }
 
 .masonry {
@@ -737,4 +751,61 @@
 
 .reveal section .fragment img {
     max-width: 100%;
+}
+
+.gridAutoRows {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 5px;
+}
+
+.mic {
+    grid-auto-rows: min-content;
+}
+
+.mmic {
+    grid-auto-rows: minmax(min-content, auto);
+}
+
+.gridCol {
+    grid-auto-flow: column dense;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.gridCol div span {
+    display: grid;
+    align-items: center;
+}
+
+.gridCol div:first-child {
+    grid-column: 4;
+}
+
+.gridCol1 div:first-child {
+    grid-column: 1 / 3;
+}
+
+.gridCol2 div:first-child {
+    grid-column: 1 / span 3;
+}
+.gridCol > span {
+    position: absolute;
+}
+
+.gridCol .row,
+.gridCol .col {
+
+}
+
+.gridCol .col2 {
+    left: 236px;
+}
+
+.gridCol .col4 {
+    left: 478px;
+}
+
+.gridCol .col5 {
+    left: 719px;
 }
