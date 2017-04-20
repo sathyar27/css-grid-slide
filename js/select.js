@@ -48,16 +48,19 @@
 					el.commonWrap.find('.arrow').removeClass('close');
 					el.commonWrap.find('.arrow').addClass('close');
 					el.commonWrap.parent('.selectGroup').find('p i').text(currval);
+					el.commonWrap.parents('section').find('.codeOutput i').text(currval);
 
 					if($(this).text() == defaultText) {
 						el.commonWrap.find('.text').addClass('choose');
 						el.commonWrap.find('.arrow').removeClass('close');
 						el.commonWrap.parent('.selectGroup').find('p i').text(defaultText);
+						el.commonWrap.parents('section').find('.codeOutput i').text(defaultText);
 					}
 					else {
 						el.commonWrap.find('.arrow').addClass('close');
 						el.commonWrap.find('.text').removeClass('choose');
 						el.commonWrap.parent('.selectGroup').find('p i').text(currval);
+						el.commonWrap.parents('section').find('.codeOutput i').text(currval);
 					}
 
 					if($(this).text() == 'dense') {
@@ -93,29 +96,23 @@
 					}
 
 					if($(this).text() == '1 / 3') {
-						$('.gridCol').addClass('gridCol1').removeClass('gridCol2 gridCol3');
+						$('.gridCol').addClass('gridCol1').removeClass('gridCol2 gridCol3 auto');
 					}
 					else if($(this).text() === '1 / span 3') {
-						$('.gridCol').addClass('gridCol2').removeClass('gridCol3 gridCol4');
-					}
-					else if($(this).text() === 'header') {
-						$('.gridCol').addClass('gridCol3').removeClass('gridCol1 gridCol2');
+						$('.gridCol').addClass('gridCol2').removeClass('gridCol1 gridCol3 auto');
 					}
 					else if($(this).text() === 'auto') {
 						$('.gridCol').addClass('auto').removeClass('gridCol1 gridCol2 gridCol3');
 					}
 					else {
-						$('.gridCol').removeClass('gridCol1 gridCol2 gridCol3');
+						$('.gridCol').removeClass('gridCol1 gridCol2 gridCol3 auto');
 					}
 
 					if($(this).text() == '1 / 3') {
-						$('.gridRow').addClass('gridCol1').removeClass('gridRow2 gridRow3');
+						$('.gridRow').addClass('gridRow1').removeClass('gridRow2 gridRow3');
 					}
 					else if($(this).text() === '1 / span 3') {
-						$('.gridRow').addClass('gridCol2').removeClass('gridRow3 gridRow4');
-					}
-					else if($(this).text() === 'header') {
-						$('.gridRow').addClass('gridCol3').removeClass('gridRow1 gridRow2');
+						$('.gridRow').addClass('gridRow2').removeClass('gridRow3 gridRow4');
 					}
 					else if($(this).text() === 'auto') {
 						$('.gridRow').addClass('auto').removeClass('gridRow1 gridRow2 gridRow3');
@@ -132,6 +129,7 @@
 					el.commonWrap.find('.bgText').addClass('active');
 					el.commonWrap.find('.text').text(defaultText).removeClass('choose');
 					el.commonWrap.parent('.selectGroup').find('p i').text(defaultText);
+					el.commonWrap.parents('section').find('.codeOutput i').text(defaultText);
 					el.commonWrap.removeClass('active next closeActive');
 					setTimeout(function(){ el.commonWrap.find('.bgText').removeClass('active'); }, 500);
 					$('.output').removeClass('afD afCD afR afRD mm mic fr auto gridCol1 gridCol2 gridCol3 gridRow1 gridRow2 gridRow3');
