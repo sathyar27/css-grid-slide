@@ -79,20 +79,42 @@
 						$('.gridAutoFlow').removeClass('afD afCD afR afRD');
 					}
 
-					if($(this).text() == 'minmax(100px,auto)') {
-						$('.gridAutoRows').addClass('mm').removeClass('mic fr auto');
+					if($(this).text() == 'minmax(150px,auto)') {
+						$('.gridAutoRows').addClass('mm').removeClass('mic mxc auto pxval');
 					}
 					else if($(this).text() === 'min-content') {
-						$('.gridAutoRows').addClass('mic').removeClass('mm fr auto');
+						$('.gridAutoRows').addClass('mic').removeClass('mm mxc auto pxval');
 					}
-					else if($(this).text() === 'minmax(min-content,auto)') {
-						$('.gridAutoRows').addClass('mmic').removeClass('mm mic auto');
+					else if($(this).text() === 'max-content') {
+						$('.gridAutoRows').addClass('mxc').removeClass('mic mm auto pxval');
+					}
+					else if($(this).text() === '150px') {
+						$('.gridAutoRows').addClass('pxval').removeClass('mic mxc auto mm');
 					}
 					else if($(this).text() === 'auto') {
-						$('.gridAutoRows').addClass('auto').removeClass('mm mic fr');
+						$('.gridAutoRows').addClass('auto').removeClass('mic mxc mm pxval');
 					}
 					else {
 						$('.gridAutoRows').removeClass('mm mic fr auto');
+					}
+
+					if($(this).text() == 'minmax(150px,auto)') {
+						$('.gridAutoCols').addClass('mm').removeClass('mic mxc auto pxval');
+					}
+					else if($(this).text() === 'min-content') {
+						$('.gridAutoCols').addClass('mic').removeClass('mm mxc auto pxval');
+					}
+					else if($(this).text() === 'max-content') {
+						$('.gridAutoCols').addClass('mxc').removeClass('mic mm auto pxval');
+					}
+					else if($(this).text() === '25%') {
+						$('.gridAutoCols').addClass('pxval').removeClass('mic mxc auto mm');
+					}
+					else if($(this).text() === 'auto') {
+						$('.gridAutoCols').addClass('auto').removeClass('mic mxc mm pxval');
+					}
+					else {
+						$('.gridAutoCols').removeClass('mm mic fr auto');
 					}
 
 					if($(this).text() == '1 / 3') {

@@ -238,29 +238,25 @@
 						<div class="selectGroup">
 							<p><strong>Demo</strong></p>
 							<select name="abc">
-								<option value="0">minmax(100px, auto)</option>
+								<option value="0">minmax(150px, auto)</option>
 								<option value="1">min-content</option>
-								<option value="2">mimax(min-content,auto)</option>
-								<option value="3">100px</option>
+								<option value="2">max-content</option>
+								<option value="3">150px</option>
 								<option value="4">auto</option>
 							</select>
 						</div>
 						<div class="output gridBgCommon gridAutoRows">
-							<div><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span></div>
+							<div><span>Lorem Ipsum is simply dummy.</span></div>
 							<div>
 								<span>
 									Contrary to popular belief, Lorem Ipsum is not simply random text.
-									It has roots in a piece of classical Latin literature from 45 BC,
-									making it over 2000 years old.
 								</span>
 							</div>
-							<div><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span></div>
-							<div><span>There are many variations of passages of Lorem Ipsum available,
-								but the majority have suffered alteration in some form,
-								by injected humour, or randomised words which don't look even slightly believable.</span></div>
+							<div><span>Lorem Ipsum is not simply random text.</span></div>
+							<div><span>There are many variations of passages of Lorem Ipsum available.</span></div>
 							<div><span>The generated Lorem Ipsum is therefore always free from repetition.</span></div>
-							<div><span>The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</span></div>
-							<div><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span></div>
+							<div><span>The generated Lorem Ipsum.</span></div>
+							<div><span>Lorem Ipsum is simply dummy text.</span></div>
 						</div>
 						<div class="codeOutput">.wrapper { grid-auto-rows: <i>minmax(100px, auto)</i> }</div>
 					</section>
@@ -276,21 +272,25 @@
 						<div class="selectGroup">
 							<p><strong>Demo</strong></p>
 							<select name="abc">
-								<option value="0">minmax(100px, auto)</option>
+								<option value="0">minmax(100px, 200px)</option>
 								<option value="1">min-content</option>
 								<option value="2">max-content</option>
-								<option value="3">100px</option>
+								<option value="3">25%</option>
 								<option value="4">auto</option>
 							</select>
 						</div>
-						<div class="output gridBgCommon gridAutoRows">
-							<div><span></span></div>
-							<div><span></span></div>
-							<div><span></span></div>
-							<div><span></span></div>
-							<div><span></span></div>
-							<div><span></span></div>
-							<div><span></span></div>
+						<div class="output gridBgCommon gridAutoCols">
+							<div><span>Lorem Ipsum is simply dummy.</span></div>
+							<div>
+								<span>
+									Contrary to popular belief, Lorem Ipsum is not simply random text.
+								</span>
+							</div>
+							<div><span>Lorem Ipsum is not simply random text.</span></div>
+							<div><span>There are many variations of passages of Lorem Ipsum available.</span></div>
+							<div><span>The generated Lorem Ipsum is therefore always free from repetition.</span></div>
+							<div><span>The generated Lorem Ipsum.</span></div>
+							<div><span>Lorem Ipsum is simply dummy text.</span></div>
 						</div>
 						<div class="codeOutput">.wrapper { grid-auto-columns: <i>minmax(100px, auto)</i> }</div>
 					</section>
@@ -457,6 +457,7 @@
 							<span class="col col7"></span>
 							<span class="col col8"></span>
 						</div>
+						<a href="http://codepen.io/rachelandrew/pen/beBeKJ">Masonry Smaple</a>
 					</section>
 				</section>
 				<section>
@@ -485,6 +486,9 @@
 							Polyfill with new specification<br><a href="https://github.com/FremyCompany/css-grid-polyfill/" target="_blank">https://github.com/FremyCompany/css-grid-polyfill/</a>
 						</p>
 					</section>
+					<!-- <section>
+						<a href="https://codepen.io/hedr/pen/jbgaKy">Example1</a>
+					</section> -->
 				</section>
 			<!--	<section>
 					<h2>Demo</h2>
